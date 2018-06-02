@@ -1,0 +1,57 @@
+button{
+    margin-right:5px; /* margins are being over-written. I'm not sure why. */
+    margin-left:5px;    /* This is over-written */
+    background: rgb(109, 109, 206);
+}
+.jumbotron{
+    background-image: url("images/island.jpg");
+}
+
+
+
+
+
+.card-container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+    perspective: 900px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  margin-bottom: 50px;
+
+}
+img{
+    position: absolute;
+    top: 0%;
+    left: 85%;
+    width: 20%;
+    height: 25%;
+}
+
+.flip{
+    width:100%;
+    height:100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip--front{
+    background:orange;
+}
+.flip--back{
+    background:blueviolet;
+    transform: rotateY( 180deg );
+    pointer-events:none;
+}
+.card.is-flipped {
+    transform: rotateY(180deg);
+}

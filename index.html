@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Star</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://icons.iconarchive.com/icons/cjdowner/cryptocurrency/512/MonaCoin-icon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Reset html page styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
+    <!-- Maine css Styling -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Jumbotron holds the title section. -->
+    <div class='jumbotron'>
+        <div class='container text-white'>
+            <h1 class="text-center">Triviali!</h1>
+            <h2 class="text-center">"Leave the gun. Take the Canoli!"</br>
+            </h2>
+            <h4>1) Choose your topic of choice!</br>
+            </h4>
+            <h4>2)Choose to do a "Speed Round" to test your knowledgeprowress or go for a normal game of Trivia!</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="pointList text-center">
+                <h2>Statistical Prowess</h2>
+                <div>
+                    <h3>
+                        <u>Correct</u>
+                    </h3>
+                    <h4 id="correctPoints">0</h4>
+                </div>
+                <div>
+                    <h3>
+                        <u>Wrong</u>
+                    </h3>
+                    <h4 id="wrongPoints">0</h4>
+                </div>
+                <div>
+                    <h3>
+                        <u>Timed out</u>
+                    </h3>
+                    <h4 id="timedPoints">0</h4>
+                </div>
+                <button id="reset">Reset</button>
+            </div>
+            <!-- Points here -->
+        </div>
+        <div class="container col-lg-6">
+            <div class="card-container">
+                <h2 class="triviaTopic text-center">Dino Trivia</h2>
+                <div class="questionBody card">
+                    <!-- Topic of trivia game here -->
+                    <div class="triviaSection flip flip--front">
+                        <div class="questionHolder "></div>
+                        <!-- Quesion will be dispayed here -->
+                        <div class="answerHolder"></div>
+                        <!-- Answer will be displayed here -->
+                    </div>
+                    <!-- Back of card = wrong, correct, timed out -->
+                    <div class="flip flip--back"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="timer list text-center">
+                <h2>Time Left</h2>
+                <h3 id="timeDisplay">00:15</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="logic.js"></script>
+
+</body>
+
+</html>
